@@ -1,0 +1,6 @@
+sx1302-hal (1.1.2-1+upiot20200932.1845) UNRELEASED; urgency=low
+
+  * Initial release. Closes: #nnnn
+    <nnnn is the bug number of your ITP>
+
+ -- Lu Ken <bluewish.ken.lu@gmail.com>  Tue, 22 Sep 2020 22:24:57 +0800

@@ -11,7 +11,7 @@ CROSS_COMPILE ?=
 CC := $(CROSS_COMPILE)gcc
 AR := $(CROSS_COMPILE)ar
 
-CFLAGS := -O2 -Wall -Wextra -std=c99 -Iinc -I. -I../libtools/inc
+CCFLAGS := -O2 -Wall -Wextra -std=c99 -Iinc -I. -I../libtools/inc
 
 OBJDIR = obj
 INCLUDES = $(wildcard inc/*.h) $(wildcard ../libtools/inc/*.h)
@@ -81,7 +81,7 @@ $(OBJDIR):
 	mkdir -p $(OBJDIR)
 
 $(OBJDIR)/%.o: src/%.c $(INCLUDES) inc/config.h | $(OBJDIR)
-	$(CC) -c $(CFLAGS) $< -o $@
+	$(CC) -c $(CCFLAGS) $< -o $@
 
 ### static library
 
@@ -91,33 +91,33 @@ libloragw.a: $(OBJDIR)/loragw_spi.o $(OBJDIR)/loragw_i2c.o $(OBJDIR)/loragw_aux.
 ### test programs
 
 test_loragw_spi: tst/test_loragw_spi.c libloragw.a
-	$(CC) $(CFLAGS) -L. -L../libtools $< -o $@ $(LIBS)
+	$(CC) $(CCFLAGS) -L. -L../libtools $< -o $@ $(LIBS)
 
 test_loragw_i2c: tst/test_loragw_i2c.c libloragw.a
-	$(CC) $(CFLAGS) -L. -L../libtools $< -o $@ $(LIBS)
+	$(CC) $(CCFLAGS) -L. -L../libtools $< -o $@ $(LIBS)
 
 test_loragw_reg: tst/test_loragw_reg.c libloragw.a
-	$(CC) $(CFLAGS) -L. -L../libtools $< -o $@ $(LIBS)
+	$(CC) $(CCFLAGS) -L. -L../libtools $< -o $@ $(LIBS)
 
 test_loragw_hal_tx: tst/test_loragw_hal_tx.c libloragw.a
-	$(CC) $(CFLAGS) -L. -L../libtools $< -o $@ $(LIBS)
+	$(CC) $(CCFLAGS) -L. -L../libtools $< -o $@ $(LIBS)
 
 test_loragw_hal_rx: tst/test_loragw_hal_rx.c libloragw.a
-	$(CC) $(CFLAGS) -L. -L../libtools $< -o $@ $(LIBS)
+	$(CC) $(CCFLAGS) -L. -L../libtools $< -o $@ $(LIBS)
 
 test_loragw_capture_ram: tst/test_loragw_capture_ram.c libloragw.a
-	$(CC) $(CFLAGS) -L. -L../libtools  $< -o $@ $(LIBS)
+	$(CC) $(CCFLAGS) -L. -L../libtools  $< -o $@ $(LIBS)
 
 test_loragw_cal: tst/test_loragw_cal.c libloragw.a
-	$(CC) $(CFLAGS) -L. -L../libtools  $< -o $@ $(LIBS)
+	$(CC) $(CCFLAGS) -L. -L../libtools  $< -o $@ $(LIBS)
 
 test_loragw_spi_sx1250: tst/test_loragw_spi_sx1250.c libloragw.a
-	$(CC) $(CFLAGS) -L. -L../libtools  $< -o $@ $(LIBS)
+	$(CC) $(CCFLAGS) -L. -L../libtools  $< -o $@ $(LIBS)
 
 test_loragw_counter: tst/test_loragw_counter.c libloragw.a
-	$(CC) $(CFLAGS) -L. -L../libtools  $< -o $@ $(LIBS)
+	$(CC) $(CCFLAGS) -L. -L../libtools  $< -o $@ $(LIBS)
 
 test_loragw_gps: tst/test_loragw_gps.c libloragw.a
-	$(CC) $(CFLAGS) -L. -L../libtools  $< -o $@ $(LIBS)
+	$(CC) $(CCFLAGS) -L. -L../libtools  $< -o $@ $(LIBS)
 
 ### EOF

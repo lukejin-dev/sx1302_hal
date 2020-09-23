@@ -27,7 +27,7 @@ RELEASE_VERSION := `cat ../VERSION`
 CC := $(CROSS_COMPILE)gcc
 AR := $(CROSS_COMPILE)ar
 
-CFLAGS := -O2 -Wall -Wextra -std=c99 -Iinc -I. -I../libtools/inc
+CCFLAGS := -O2 -Wall -Wextra -std=c99 -Iinc -I. -I../libtools/inc
 VFLAG := -D VERSION_STRING="\"$(RELEASE_VERSION)\""
 
 ### Constants for Lora concentrator HAL library
@@ -80,12 +80,12 @@ $(OBJDIR):
 	mkdir -p $(OBJDIR)
 
 $(OBJDIR)/%.o: src/%.c $(INCLUDES) | $(OBJDIR)
-	$(CC) -c $(CFLAGS) -I$(LGW_PATH)/inc $< -o $@
+	$(CC) -c $(CCFLAGS) -I$(LGW_PATH)/inc $< -o $@
 
 ### Main program compilation and assembly
 
 $(OBJDIR)/$(APP_NAME).o: src/$(APP_NAME).c $(LGW_INC) $(INCLUDES) | $(OBJDIR)
-	$(CC) -c $(CFLAGS) $(VFLAG) -I$(LGW_PATH)/inc $< -o $@
+	$(CC) -c $(CCFLAGS) $(VFLAG) -I$(LGW_PATH)/inc $< -o $@
 
 $(APP_NAME): $(OBJDIR)/$(APP_NAME).o $(LGW_PATH)/libloragw.a $(OBJDIR)/jitqueue.o
 	$(CC) -L$(LGW_PATH) -L$(LIB_PATH) $< $(OBJDIR)/jitqueue.o -o $@ $(LIBS)
