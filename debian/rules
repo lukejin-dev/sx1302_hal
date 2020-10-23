@@ -22,6 +22,5 @@ override_dh_auto_install:
 	cp packet_forwarder/global_conf.* opt/sx1302-hal
 	cp util_chip_id/chip_id opt/sx1302-hal
 	cp util_net_downlink/net_downlink opt/sx1302-hal
-
 	mkdir -p etc/systemd/system/
-	cp tools/systemd/lora_pkt_fwd.service etc/system/systemd
+	cp tools/systemd/lora_pkt_fwd.service etc/systemd/system

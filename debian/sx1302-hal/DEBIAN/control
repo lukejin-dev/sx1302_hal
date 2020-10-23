@@ -2,7 +2,7 @@ Package: sx1302-hal
 Version: 1.1.2-1+upiot20200932.1845
 Architecture: armhf
 Maintainer: Lu Ken <bluewish.ken.lu@gmail.com>
-Installed-Size: 2206
+Installed-Size: 1351
 Depends: libc6 (>= 2.8)
 Section: unknown
 Priority: required
