@@ -14,11 +14,11 @@
             "enable": true,
             "type": "SX1250",
             "single_input_mode": true,
-            "freq": 471400000,
+            "freq": 474600000,
             "rssi_offset": -207.0,
             "rssi_tcomp": {"coeff_a": 0, "coeff_b": 0, "coeff_c": 20.41, "coeff_d": 2162.56, "coeff_e": 0},
             "tx_enable": true,
-            "tx_freq_min": 500000000,
+            "tx_freq_min": 470000000,
             "tx_freq_max": 510000000,
             "tx_gain_lut":[
                 {"rf_power": -6, "pa_gain": 0, "pwr_idx":  0},
@@ -43,7 +43,7 @@
             "enable": true,
             "type": "SX1250",
             "single_input_mode": true,
-            "freq": 475000000,
+            "freq": 475400000,
             "rssi_offset": -207.0,
             "rssi_tcomp": {"coeff_a": 0, "coeff_b": 0, "coeff_c": 20.41, "coeff_d": 2162.56, "coeff_e": 0},
             "tx_enable": false
@@ -62,11 +62,11 @@
     },
 
     "gateway_conf": {
-        "gateway_ID": "AA555A0000000000",
+        "gateway_ID": "12345678aaaaaaaa",
         /* change with default server address/ports */
-        "server_address": "localhost",
-        "serv_port_up": 1730,
-        "serv_port_down": 1730,
+        "server_address": "iot.metathings.cc",
+        "serv_port_up": 1700,
+        "serv_port_down": 1700,
         /* adjust the following parameters for your network */
         "keepalive_interval": 10,
         "stat_interval": 30,
