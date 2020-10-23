@@ -1,3 +1,10 @@
+
+sx1302-hal (1.1.2-1+upiot20201023.1425) UNRELEASED; urgency=low
+
+  * Update for UPIOT with China 470
+
+ -- Lu Ken <bluewish.ken.lu@gmail.com>  Thus, Oct 2020 14:27:57 +0800
+
 sx1302-hal (1.1.2-1+upiot20200932.1845) UNRELEASED; urgency=low
 
   * Initial release. Closes: #nnnn

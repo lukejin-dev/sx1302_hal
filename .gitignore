@@ -10,3 +10,4 @@ util_net_downlink/net_downlink
 etc/
 opt/
 debian/.debhelper/
+upiot-sx1302-hal*
