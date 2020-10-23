@@ -11,3 +11,4 @@ etc/
 opt/
 debian/.debhelper/
 upiot-sx1302-hal*
+debian/debhelper-build-stamp
