@@ -15,12 +15,14 @@
 #	dh_install --list-missing -X.pyc -X.pyo
 
 override_dh_auto_install:
-	mkdir -p opt/sx1302-hal
-	cp libloragw/test_loragw* opt/sx1302-hal
-	cp tools/reset_lgw.sh opt/sx1302-hal
-	cp packet_forwarder/lora_pkt_fwd opt/sx1302-hal
-	cp packet_forwarder/global_conf.* opt/sx1302-hal
-	cp util_chip_id/chip_id opt/sx1302-hal
-	cp util_net_downlink/net_downlink opt/sx1302-hal
-	mkdir -p etc/systemd/system/
-	cp tools/systemd/lora_pkt_fwd.service etc/systemd/system
+	mkdir -p install-temp/opt/sx1302-hal
+	cp libloragw/test_loragw* install-temp/opt/sx1302-hal
+	cp tools/reset_lgw.sh install-temp/opt/sx1302-hal
+	cp packet_forwarder/lora_pkt_fwd install-temp/opt/sx1302-hal
+	cp packet_forwarder/global_conf.* install-temp/opt/sx1302-hal
+	cp util_chip_id/chip_id install-temp/opt/sx1302-hal
+	cp util_net_downlink/net_downlink install-temp/opt/sx1302-hal
+	mkdir -p install-temp/etc/systemd/system/
+	
+	dh_systemd_enable || true
+	dh_systemd_start || true

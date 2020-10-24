@@ -1,3 +1,3 @@
-sx1302-hal_1.1.2-1+upiot20201023.1425_armhf.buildinfo unknown required
-upiot-sx1302-hal-dbgsym_1.1.2-1+upiot20201023.1425_armhf.deb debug optional automatic=yes
-upiot-sx1302-hal_1.1.2-1+upiot20201023.1425_armhf.deb unknown required
+sx1302-hal_1.1.2-1+upiot20201024.1031_armhf.buildinfo unknown required
+upiot-sx1302-hal-dbgsym_1.1.2-1+upiot20201024.1031_armhf.deb debug optional automatic=yes
+upiot-sx1302-hal_1.1.2-1+upiot20201024.1031_armhf.deb unknown required
