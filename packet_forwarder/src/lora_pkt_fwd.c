@@ -1210,6 +1210,8 @@ int main(int argc, char ** argv)
     uint32_t cp_nb_beacon_sent = 0;
     uint32_t cp_nb_beacon_rejected = 0;
 
+    setbuf(stdout, NULL);
+
     /* GPS coordinates variables */
     bool coord_ok = false;
     struct coord_s cp_gps_coord = {0.0, 0.0, 0};

@@ -22,7 +22,3 @@ override_dh_auto_install:
 	cp packet_forwarder/global_conf.* install-temp/opt/sx1302-hal
 	cp util_chip_id/chip_id install-temp/opt/sx1302-hal
 	cp util_net_downlink/net_downlink install-temp/opt/sx1302-hal
-	mkdir -p install-temp/etc/systemd/system/
-	
-	dh_systemd_enable || true
-	dh_systemd_start || true

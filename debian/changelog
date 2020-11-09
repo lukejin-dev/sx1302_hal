@@ -1,4 +1,11 @@
 
+sx1302-hal (1.1.2-1+upiot20201109.2118) UNRELEASED; urgency=low
+
+  * Disable buffering of stdout
+  * Remove upiot-sx1302-service, which replaced by upiot-gateway
+
+ -- Lu Ken <bluewish.ken.lu@gmail.com>  Mon, 09 Nov 2020 21:18:57 +0800
+
 sx1302-hal (1.1.2-1+upiot20201024.1031) UNRELEASED; urgency=low
 
   * Install upiot-sx1302-hal service and enable auto.
